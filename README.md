@@ -36,7 +36,7 @@ A RESTful API for managing restaurants, meals, and users. The API supports authe
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone fakheraqeell-afk/restaurant-api
    ```
 
 2. Navigate to the project folder:
