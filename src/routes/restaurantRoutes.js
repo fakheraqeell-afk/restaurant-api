@@ -51,15 +51,15 @@ router.get("/", getAllRestaurants);
  *             properties:
  *               name:
  *                 type: string
- *                 example: Italian Restaurant
+ *                 example: Syrian Restaurant
  *               description:
  *                 type: string
- *                 example: A great Italian restaurant
+ *                 example: A great Syrian restaurant
  *               cuisine:
  *                 type: array
  *                 items:
  *                   type: string
- *                 example: [Italian, Pizza]
+ *                 example: [Syrian, Mahashi]
  *               address:
  *                 type: object
  *                 example:

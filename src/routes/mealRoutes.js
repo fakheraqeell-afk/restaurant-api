@@ -81,7 +81,7 @@ router.get("/", getAllMeals);
  *                 example: 10
  *               category:
  *                 type: string
- *                 enum: [appetizer, main course, dessert, beverage, side dish]
+ *                 enum: [appetizer, main course]
  *               ingredients:
  *                 type: array
  *                 items:

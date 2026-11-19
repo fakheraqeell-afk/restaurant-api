@@ -13,11 +13,11 @@ const userRepo = AppDataSource.getMongoRepository(User);
 export const register = catchAsync(async(req, res) => {
     const { name, email, password, role, phone, address } = req.body;
 
-    // Check if user already exist
+    
     const existing= await userRepo.findOneBy({ email });
     if (existing) throw new AppError("Email already exists", 400);
 
-    // Only allow client and restaurant_owner registration
+
     const allowedRoles = ["client", "restaurant_owner"];
     const userRole = role || "client";
 
@@ -25,10 +25,10 @@ export const register = catchAsync(async(req, res) => {
         throw new AppError("Invalid role", 400);
     }
 
-    // Hash password    
+     
     const hashedPassword = await bcrypt.hash(password, 10)
 
-    // Create user
+
     const user = userRepo.create({
         name,
         email,
@@ -47,11 +47,11 @@ export const register = catchAsync(async(req, res) => {
 export const login = catchAsync(async (req, res) => {
      const { email, password } = req.body;
 
-    // Find user by email
+    
     const user = await userRepo.findOneBy({email});
     if(!user) throw new AppError("Invalid email or password", 401);
 
-    // Compare passwords
+
     const isPasswordCorrect = await bcrypt.compare( password, user.password);
     if(!isPasswordCorrect) throw new AppError("Invalid email or password", 401);
     
