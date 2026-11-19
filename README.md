@@ -31,42 +31,6 @@ A RESTful API for managing restaurants, meals, and users. The API supports authe
 - Request validation and centralized error handling
 - API rate limiting and security headers
 
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone fakheraqeell-afk/restaurant-api
-   ```
-
-2. Navigate to the project folder:
-
-   ```bash
-   cd restaurant-api
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Create a `.env` file in the root directory:
-
-   ```env
-   PORT=3000
-   JWT_SECRET=your_secret_here
-   JWT_EXPIRE=7d
-   ```
-
-5. Make sure MongoDB is running.
-
-6. Start the server:
-
-   ```bash
-   npm run start
-   ```
-
 ## API Documentation
 
 After starting the server, visit:
